@@ -1,7 +1,6 @@
 import { gql, Image, useRouteParams, useShopQuery } from "@shopify/hydrogen";
 import React from "react";
 import Layout from "../../components/Layout.server";
-import Banner from "../../assets/banner.jpg";
 import ProductDetails from "../../components/ProductDetails.client";
 
 const Product = () => {
