@@ -39,6 +39,8 @@ const Layout = ({children}: {children: ReactNode}) => {
             participate in.
           </div>
         </div>
+        <div id="f22plugin"></div>
+
         <footer className="w-full border-t border-black h-12 grid place-items-center">
             <span>copyright © test-for-qa all rights reserved.</span>
         </footer>
