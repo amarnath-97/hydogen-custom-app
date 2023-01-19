@@ -1,5 +1,5 @@
 import Layout from "../components/Layout.server";
-import Banner from "../../public/banner.jpg";
+import Banner from "../assets/banner.jpg";
 import CollectionCard from "../components/cards/CollectionCard";
 import { CacheLong, gql, Link, useShopQuery } from "@shopify/hydrogen";
 
