@@ -28,7 +28,7 @@ function CartTable() {
       return <div className="w-full">No items in cart.</div>;
   } else {
     return (
-      <div className="w-full max-h-[100vh] border">
+      <div className="w-full h-full flex justify-center flex-col p-5">
         <table className="w-full">
           <tbody>
             {lines.map((line) => (
@@ -59,11 +59,11 @@ function CartLineItem() {
   const { lineId, merchandise, cost } = useCartLine();
   const { image, product, selectedOptions } = merchandise;
   return (
-    <tr key={lineId} className="w-full flex ">
-      <td>
-        <Image className="w-52 h-64" data={image} alt="" />{" "}
+    <tr key={lineId} className="w-[100%] flex gap-3 items-center">
+      <td className="mb-4 w-48 h-64">
+        <Image className="w-full h-full" data={image} alt="" />{" "}
       </td>
-      <td className="">
+      <td className="w-96 h-64 text-justify">
         <Link to={`/product/${product.handle}`}>{product.title}</Link>
         <div>
           {selectedOptions?.map((option) => (
@@ -112,7 +112,7 @@ function CartLineItem() {
           </svg>
         </CartLineQuantityAdjustButton>
       </td>
-      <td>
+      <td className="flex justify-between items-center w-28">
         <Money withoutTrailingZeros data={cost.totalAmount} />
         <CartLineQuantityAdjustButton as="div" className="" adjust="remove">
           <svg

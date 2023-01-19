@@ -9,10 +9,10 @@ import {
 const ProductDetails = ({ product }) => {
   return (
     <ProductOptionsProvider data={product}>
-        <div className="details w-full flex h-[95vh] ">
+        <div className="details w-full flex h-[90vh] ">
           <div className="images border border-black border-t-transparent h-full w-[50%] overflow-x-auto scrollbar-hide ">
             {product?.media?.nodes?.map((variant) => (
-              <div className="image__wrapper w-full h-full">
+              <div className="image__wrapper w-full h-full" key={variant.image.url}>
                 <Image
                   data={variant?.image}
                   alt={`Product Image`}
@@ -30,7 +30,7 @@ const ProductDetails = ({ product }) => {
               </span>
             </div>
 
-            <div className="description border-t border-black flex flex-col h-full">
+            <div className="description border-t border-black flex flex-col h-full justify-between">
               <div className="desc h-[50%] p-5">
                 <div
                   className="prose sm:text-sm lg:text-lg h-[45%] overflow-x-auto scrollbar-hide"
@@ -143,11 +143,11 @@ function PurchaseMarkup() {
         quantity={1}
         accessibleAddingToCartLabel="Adding item to your cart"
         disabled={isOutOfStock}
-        style={{width: "100%"}}
+        className="w-full bg-black text-white h-full"
       >
-        <span className="bg-black text-white inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none w-full">
+        {/* <span className="bg-black text-white inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none w-full"> */}
           {isOutOfStock ? "Sold out" : "Add to cart"}
-        </span>
+        {/* </span> */}
       </AddToCartButton>
       {/* {isOutOfStock ? (
           <span className="text-black text-center py-3 px-6 border rounded-sm leading-none ">

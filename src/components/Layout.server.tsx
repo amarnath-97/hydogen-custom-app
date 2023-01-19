@@ -20,7 +20,9 @@ const Layout = ({children}: {children: ReactNode}) => {
 
   const {pathname} = useUrl();
   const isHome = pathname === "/";
-  console.log(pathname);
+  // console.log(pathname);
+
+  // console.log(process.env.MSG);
 
   return (
       <div className="w-full h-screen">
