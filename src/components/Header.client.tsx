@@ -7,6 +7,7 @@ const Header = ({ shop, isHome }: { shop: string; isHome: string }) => {
   // console.log(data);
   return (
     <>
+      <f22-plugin></f22-plugin>
       <div className="w-full bg-white z-10 flex justify-between p-3 items-center border-b border-black gap-2 min-h-[5vh]">
         <div className="left__nav flex w-1/3 justify-start uppercase font-thin text-sm items-center">
           <ul className="flex gap-5 justify-around uppercase font-thin text-sm">

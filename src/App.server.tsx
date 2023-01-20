@@ -6,19 +6,26 @@ import {
   CartProvider,
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
-
 function App() {
+
+  
   return (
-    <Suspense fallback={null}>
+    <>   
+    <Suspense fallback={"loading..."}>
+   
       <ShopifyProvider>
         <CartProvider>
+       
           <Router>
+          
             <FileRoutes />
           </Router>
         </CartProvider>
       </ShopifyProvider>
     </Suspense>
-  );
+    </>
+  )
+  ;
 }
 
 export default renderHydrogen(App);

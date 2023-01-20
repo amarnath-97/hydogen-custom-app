@@ -2,6 +2,7 @@ import Layout from "../components/Layout.server";
 import CollectionCard from "../components/cards/CollectionCard";
 import { CacheLong, gql, Link, useShopQuery } from "@shopify/hydrogen";
 import Banner from "../components/Banner.client";
+import {NoSsr} from '@shopify/hydrogen';
 
 interface CollectionType {
   title: string;
@@ -19,7 +20,9 @@ const Home = () => {
 
   return (
     <>
+    
       <Layout>
+      
         <div className="banner w-full h-full">
           <Banner />
         </div>

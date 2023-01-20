@@ -10,12 +10,16 @@ import {
   CartLineQuantityAdjustButton,
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
+// import NoSSR from "./NoSSR.client";
 
 const CartPage = () => {
   return (
-    <Suspense>
-      <CartTable />
-    </Suspense>
+    <>
+      {/* <NoSSR /> */}
+      <Suspense>
+        <CartTable />
+      </Suspense>
+    </>
   );
 };
 
