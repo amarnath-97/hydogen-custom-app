@@ -30,6 +30,8 @@ function CartTable() {
   if (lines.length === 0) {
     if (status === "idle")
       return <div className="w-full">No items in cart.</div>;
+      else
+        return<div></div>
   } else {
     return (
       <div className="w-full h-full flex justify-center flex-col p-5">
@@ -50,7 +52,7 @@ function CartTable() {
           </tbody>
         </table>
         <div className="cart-footer flex items-center justify-end">
-          <Link to={checkoutUrl} className="p-2 bg-black text-white">
+          <Link to={checkoutUrl as string } className="p-2 bg-black text-white">
             Checkout
           </Link>
         </div>
@@ -60,12 +62,12 @@ function CartTable() {
 }
 
 function CartLineItem() {
-  const { lineId, merchandise, cost } = useCartLine();
+  const { merchandise, cost } = useCartLine();
   const { image, product, selectedOptions } = merchandise;
   return (
-    <tr key={lineId} className="w-[100%] flex gap-3 items-center">
+    <tr className="w-[100%] flex gap-3 items-center">
       <td className="mb-4 w-48 h-64">
-        <Image className="w-full h-full" data={image} alt="" />{" "}
+        <Image height={'100%'} width={'100%'} data={image!} alt={image?.altText as string } />{" "}
       </td>
       <td className="w-96 h-64 text-justify">
         <Link to={`/product/${product.handle}`}>{product.title}</Link>

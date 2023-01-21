@@ -2,7 +2,7 @@ import { Link, useCart } from "@shopify/hydrogen";
 import Timer from "./Timer";
 
 
-const Header = ({ shop, isHome }: { shop: string; isHome: string }) => {
+const Header = ({ shop, isHome }: { shop: string; isHome: boolean }) => {
   const {totalQuantity} = useCart();
   // console.log(data);
   return (

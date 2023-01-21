@@ -20,6 +20,8 @@ const Layout = ({children}: {children: ReactNode}) => {
 
   const {pathname} = useUrl();
   const isHome = pathname === "/";
+
+  // console.log(isHome)
   // console.log(pathname);
 
   // console.log(process.env.MSG);
