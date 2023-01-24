@@ -10,9 +10,9 @@ const ProductDetails = ({ product }) => {
   return (
     <ProductOptionsProvider data={product}>
         <div className="details w-full flex h-[90vh] ">
-          <div className="images border border-black border-t-transparent h-full w-[50%] overflow-x-auto scrollbar-hide ">
+          <div className="images border border-black border-t-transparent h-full w-[50%] overflow-x-auto scrollbar-hide">
             {product?.media?.nodes?.map((variant) => (
-              <div className="image__wrapper w-full h-full" key={variant.image.url}>
+              <div className="image__wrapper w-full h-full m-5" key={variant.image.url}>
                 <Image
                   data={variant?.image}
                   alt={`Product Image`}
@@ -30,7 +30,7 @@ const ProductDetails = ({ product }) => {
               </span>
             </div>
 
-            <div className="description border-t border-black flex flex-col h-full justify-between">
+            <div className="description border-t border-black flex flex-col h-[89.1%] justify-between">
               <div className="desc h-[50%] p-5">
                 <div
                   className="prose sm:text-sm lg:text-lg h-[45%] overflow-x-auto scrollbar-hide"

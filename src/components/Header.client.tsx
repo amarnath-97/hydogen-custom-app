@@ -7,7 +7,7 @@ const Header = ({ shop, isHome }: { shop: string; isHome: boolean }) => {
   // console.log(data);
   return (
     <>
-      <f22-plugin></f22-plugin>
+      <f22-plugin dataURL="https://api.jsonbin.io/v3/b/63cf87e5ace6f33a22c6bead"></f22-plugin>
       <div className="w-full bg-white z-10 flex justify-between p-3 items-center border-b border-black gap-2 min-h-[5vh]">
         <div className="left__nav flex w-1/3 justify-start uppercase font-thin text-sm items-center">
           <ul className="flex gap-5 justify-around uppercase font-thin text-sm">
@@ -23,7 +23,7 @@ const Header = ({ shop, isHome }: { shop: string; isHome: boolean }) => {
         </div>
 
         <h1 className="logo font-semibold uppercase text-2xl w-1/3 flex justify-center items-center">
-          {shop}
+          Urban Fashion
         </h1>
 
         <div className="time font-thin text-sm w-1/3 flex justify-end">
